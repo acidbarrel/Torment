@@ -35,6 +35,8 @@ struct fpsclient : igameclient
     int spawngun1, spawngun2;
     int maptime;
     int respawnent;
+	//Kill death
+	int killdeath;
 
     fpsent *player1;                // our client
     vector<fpsent *> players;       // other clients
@@ -304,8 +306,8 @@ struct fpsclient : igameclient
             {
                 actor = player1->clientnum;
                 conoutf("\f2Ouch Really?");
-				//YOU SUCK
-				playsound(S_TAUNT2);
+				//YOU SUCK -- Taunt Audio -- Only plays client side anyways.
+				//playsound(S_TAUNT2);
                 cc.addmsg(SV_FRAGS, "ri", --player1->frags);
             }
             else
@@ -349,11 +351,14 @@ struct fpsclient : igameclient
     {
         if(!timeremain)
         {
+			killdeath = player1->frags/player1-deaths;
             intermission = true;
             player1->attacking = false;
             conoutf("\f2intermission:");
             conoutf("\f2game has ended!");
-			playsound(S_TAUNT3);
+			//Audio file to play during end of game Scoreboard.
+			//playsound(S_TAUNT3);
+			conoutf("\f2%d", killdeath);
             conoutf("\f2player frags: %d, deaths: %d", player1->frags, player1->deaths);
             int accuracy = player1->totaldamage*100/max(player1->totalshots, 1);
             conoutf("\f2player total damage dealt: %d, damage wasted: %d, accuracy(%%): %d", player1->totaldamage, player1->totalshots-player1->totaldamage, accuracy);               
