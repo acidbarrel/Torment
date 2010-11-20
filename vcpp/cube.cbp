@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="sauerbraten" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release Win32">
+				<Option output="..\..\bin\sauerbraten" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Release" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_CONSOLE" />
+					<Add option="-W" />
+					<Add option="-O1" />
+					<Add directory="G:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Lib" />
+					<Add directory="..\enet\include" />
+					<Add directory="G:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Include" />
+					<Add directory="..\include" />
+					<Add directory="..\engine" />
+					<Add directory="..\fpsgame" />
+					<Add directory="..\shared" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="G:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Lib" />
+					<Add directory="..\enet\include" />
+					<Add directory="G:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Include" />
+					<Add directory="..\include" />
+					<Add directory="..\engine" />
+					<Add directory="..\fpsgame" />
+					<Add directory="..\shared" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="Comdlg32" />
+					<Add library="msvcrt" />
+					<Add library="zdll" />
+					<Add library="opengl32" />
+					<Add library="glu32" />
+					<Add library="SDLmain" />
+					<Add library="SDL" />
+					<Add library="SDL_image" />
+					<Add library="ws2_32" />
+					<Add library="SDL_mixer" />
+					<Add library="fmodvc" />
+					<Add library="winmm" />
+					<Add library="dbghelp" />
+					<Add library="kernel32" />
+					<Add library="dxguid" />
+					<Add library="dsound" />
+					<Add library="user32" />
+					<Add directory="..\lib" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="copy release\sauerbraten.pdb ..\.." />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug Win32">
+				<Option output="..\..\bin\sauerbraten_debug" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Debug" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add option="-D_CONSOLE" />
+					<Add option="-W" />
+					<Add option="-O0" />
+					<Add directory="..\enet\include" />
+					<Add directory="..\include" />
+					<Add directory="..\engine" />
+					<Add directory="..\fpsgame" />
+					<Add directory="..\shared" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="..\enet\include" />
+					<Add directory="..\include" />
+					<Add directory="..\engine" />
+					<Add directory="..\fpsgame" />
+					<Add directory="..\shared" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="zdll" />
+					<Add library="opengl32" />
+					<Add library="glu32" />
+					<Add library="SDLmain" />
+					<Add library="SDL" />
+					<Add library="SDL_image" />
+					<Add library="SDL_mixer" />
+					<Add library="ws2_32" />
+					<Add library="winmm" />
+					<Add directory="..\lib" />
+				</Linker>
+			</Target>
+			<Target title="Profile Win32">
+				<Option output="c:\w\sauerbraten\sauerbraten\bin\sauerbraten" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Profile" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_CONSOLE" />
+					<Add option="-DUSE_ENET" />
+					<Add option="-W" />
+					<Add option="-O2" />
+					<Add directory="..\enet\include" />
+					<Add directory="..\include" />
+					<Add directory="..\engine" />
+					<Add directory="..\fpsgame" />
+					<Add directory="..\shared" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="..\enet\include" />
+					<Add directory="..\include" />
+					<Add directory="..\engine" />
+					<Add directory="..\fpsgame" />
+					<Add directory="..\shared" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="msvcrt" />
+					<Add library="zlib" />
+					<Add library="opengl32" />
+					<Add library="glu32" />
+					<Add library="SDLmain" />
+					<Add library="SDL" />
+					<Add library="SDL_image" />
+					<Add library="ws2_32" />
+					<Add library="SDL_mixer" />
+					<Add library="fmodvc" />
+					<Add directory="C:\w\cube\lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="..\engine\engine.h" />
+		<Unit filename="sauerbraten.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="..\engine\cubeloader.cpp" />
+		<Unit filename="..\engine\lightmap.cpp" />
+		<Unit filename="..\engine\lightmap.h" />
+		<Unit filename="..\engine\normal.cpp" />
+		<Unit filename="..\engine\octa.cpp" />
+		<Unit filename="..\engine\octa.h" />
+		<Unit filename="..\engine\octaedit.cpp" />
+		<Unit filename="..\engine\octarender.cpp" />
+		<Unit filename="..\engine\physics.cpp" />
+		<Unit filename="..\engine\world.cpp" />
+		<Unit filename="..\engine\world.h" />
+		<Unit filename="..\engine\worldio.cpp" />
+		<Unit filename="..\engine\client.cpp" />
+		<Unit filename="..\engine\crypto.cpp" />
+		<Unit filename="..\engine\hash.h" />
+		<Unit filename="..\engine\server.cpp" />
+		<Unit filename="..\engine\serverbrowser.cpp" />
+		<Unit filename="..\enet\callbacks.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\enet\host.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\enet\list.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\enet\packet.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\enet\peer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\enet\protocol.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\enet\unix.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\enet\win32.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\engine\3dgui.cpp" />
+		<Unit filename="..\engine\md2.h" />
+		<Unit filename="..\engine\md3.h" />
+		<Unit filename="..\engine\renderextras.cpp" />
+		<Unit filename="..\engine\rendergl.cpp" />
+		<Unit filename="..\engine\rendermodel.cpp" />
+		<Unit filename="..\engine\renderparticles.cpp" />
+		<Unit filename="..\engine\rendertext.cpp" />
+		<Unit filename="..\engine\shaders.h" />
+		<Unit filename="..\engine\spheretree.cpp" />
+		<Unit filename="..\engine\spheretree.h" />
+		<Unit filename="..\engine\tristrip.h" />
+		<Unit filename="..\engine\vertmodel.h" />
+		<Unit filename="..\engine\water.cpp" />
+		<Unit filename="..\engine\command.cpp" />
+		<Unit filename="..\engine\console.cpp" />
+		<Unit filename="..\engine\main.cpp" />
+		<Unit filename="..\engine\menus.cpp" />
+		<Unit filename="..\engine\sound.cpp" />
+		<Unit filename="..\shared\command.h" />
+		<Unit filename="..\shared\cube.h" />
+		<Unit filename="..\shared\ents.h" />
+		<Unit filename="..\shared\geom.cpp" />
+		<Unit filename="..\shared\geom.h" />
+		<Unit filename="..\shared\iengine.h" />
+		<Unit filename="..\shared\igame.h" />
+		<Unit filename="..\shared\pch.cpp" />
+		<Unit filename="..\shared\pch.h" />
+		<Unit filename="resource.h" />
+		<Unit filename="..\shared\tools.cpp" />
+		<Unit filename="..\shared\tools.h" />
+		<Unit filename="..\OCTA_TODO.txt" />
+		<Unit filename="..\..\docs\config.html" />
+		<Unit filename="..\..\docs\editing.html" />
+		<Unit filename="..\..\docs\editref.html" />
+		<Unit filename="..\..\docs\game.html" />
+		<Unit filename="..\..\docs\history.html" />
+		<Unit filename="..\..\README.html" />
+		<Unit filename="..\..\docs\rpg.html" />
+		<Unit filename="..\..\data\brush.cfg" />
+		<Unit filename="..\..\data\default_map_models.cfg" />
+		<Unit filename="..\..\data\default_map_settings.cfg" />
+		<Unit filename="..\..\data\defaults.cfg" />
+		<Unit filename="..\..\data\game_fps.cfg" />
+		<Unit filename="..\..\data\keymap.cfg" />
+		<Unit filename="..\..\data\menus.cfg" />
+		<Unit filename="..\..\data\sounds.cfg" />
+		<Unit filename="..\..\data\stdlib.cfg" />
+		<Unit filename="..\..\data\stdshader.cfg" />
+		<Unit filename="..\enet\include\enet\enet.h" />
+		<Unit filename="..\enet\include\enet\list.h" />
+		<Unit filename="..\enet\include\enet\protocol.h" />
+		<Unit filename="..\enet\include\enet\time.h" />
+		<Unit filename="..\enet\include\enet\types.h" />
+		<Unit filename="..\enet\include\enet\unix.h" />
+		<Unit filename="..\enet\include\enet\utility.h" />
+		<Unit filename="..\enet\include\enet\win32.h" />
+		<Unit filename="..\fpsgame\capture.h" />
+		<Unit filename="..\fpsgame\client.h" />
+		<Unit filename="..\fpsgame\entities.h" />
+		<Unit filename="..\fpsgame\fps.cpp" />
+		<Unit filename="..\fpsgame\fpsrender.h" />
+		<Unit filename="..\fpsgame\fpsserver.h" />
+		<Unit filename="..\fpsgame\game.h" />
+		<Unit filename="..\fpsgame\monster.h" />
+		<Unit filename="..\fpsgame\scoreboard.h" />
+		<Unit filename="..\fpsgame\weapon.h" />
+		<Unit filename="..\rpggame\behaviours.h" />
+		<Unit filename="..\rpggame\entities.h" />
+		<Unit filename="..\..\data\game_rpg.cfg" />
+		<Unit filename="..\rpggame\rpg.cpp" />
+		<Unit filename="..\rpggame\rpgobj.h" />
+		<Unit filename="..\rpggame\rpgobjset.h" />
+		<Unit filename="..\rpggame\stats.h" />
+		<Unit filename="..\rpggame\stubs.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Session Name="/home/david/Torment/Torment/Torment.workspace">
+  <int Value="1" Name="m_selectedTab"/>
+  <wxString Value="/home/david/Torment/Torment/Torment.workspace" Name="m_workspaceName"/>
+  <TabInfoArray Name="TabInfoArray">
+    <TabInfo>
+      <wxString Value="/home/david/Torment/scoreboard.h" Name="FileName"/>
+      <int Value="95" Name="FirstVisibleLine"/>
+      <int Value="9" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/david/Torment/server.cpp" Name="FileName"/>
+      <int Value="267" Name="FirstVisibleLine"/>
+      <int Value="268" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/david/Torment/TODO" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/david/Torment/fps.cpp" Name="FileName"/>
+      <int Value="655" Name="FirstVisibleLine"/>
+      <int Value="357" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks">
+        <wxString Value="360"/>
+      </wxArrayString>
+    </TabInfo>
+  </TabInfoArray>
+  <SerializedObject Name="m_breakpoints">
+    <long Value="0" Name="Count"/>
+  </SerializedObject>
+</Session>

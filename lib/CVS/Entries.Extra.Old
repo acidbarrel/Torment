@@ -1,0 +1,7 @@
+/SDL_image.lib////*///
+/SDL_mixer.lib////*///
+/fmodvc.lib////*///
+/SDL.lib////*///
+/SDLmain.lib////*///
+/zlib.lib////*///
+/zdll.lib////*///

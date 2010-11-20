@@ -1,0 +1,32 @@
+{
+    IBClasses = (
+        {CLASS = ConsoleView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {
+            CLASS = DisclosureController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {d1 = NSButton; d2 = NSButton; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {helpAction = id; multiplayerAction = id; playAction = id; playRpg = id; }; 
+            CLASS = Launcher; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                advancedOptions = NSTextField; 
+                console = ConsoleView; 
+                fsaa = NSSlider; 
+                fullscreen = NSButton; 
+                keys = NSArrayController; 
+                multiplayer = NSButton; 
+                name = NSTextField; 
+                resolutions = NSPopUpButton; 
+                serverOptions = NSTextField; 
+                shader = NSSlider; 
+                team = NSTextField; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

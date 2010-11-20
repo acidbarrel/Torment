@@ -1,0 +1,54 @@
+CXX=g++
+CXXOPTFLAGS=-O3 -fomit-frame-pointer
+CXXFLAGS= $(CXXOPTFLAGS) -Wall -fsigned-char -Ienet/include -Iinclude -Ishared -Iengine -Ifpsgame
+
+CLIENT_LIBS=-Llib.mingw -lstdc++ -lenet -lmingw32 -lSDLmain -lSDL -lSDL_image -lSDL_mixer -mwindows -lfmod -lz -lopengl32 -lglu32 -lws2_32 -lwinmm
+CLIENT_OBJS= \
+	shared/tools.o \
+	shared/geom.o \
+	engine/3dgui.o \
+	engine/client.o \
+	engine/command.o \
+	engine/console.o \
+	engine/crypto.o \
+	engine/cubeloader.o \
+	engine/lightmap.o \
+	engine/main.o \
+	engine/menus.o \
+	engine/normal.o \
+	engine/octa.o \
+	engine/octaedit.o \
+	engine/octarender.o \
+	engine/physics.o \
+	engine/renderextras.o \
+	engine/rendergl.o \
+	engine/rendermodel.o \
+	engine/renderparticles.o \
+	engine/rendertext.o \
+	engine/server.o \
+	engine/serverbrowser.o \
+	engine/spheretree.o \
+	engine/sound.o \
+	engine/water.o \
+	engine/world.o \
+	engine/worldio.o \
+	fpsgame/fps.o \
+	rpggame/rpg.o
+
+default: all
+
+all: client
+
+enet/Makefile:
+	cd enet; ./configure
+
+libenet: enet/Makefile
+	$(MAKE) -C enet/ all
+
+clean:
+	-$(RM) $(CLIENT_OBJS)
+	$(MAKE) -C enet/ clean
+
+client: $(CLIENT_OBJS)
+	$(CXX) $(CXXFLAGS) -o ../bin/sauerbraten-mingw.exe $(CLIENT_OBJS) $(CLIENT_LIBS)
+	strip ../bin/sauerbraten-mingw.exe
